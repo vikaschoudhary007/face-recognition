@@ -3,7 +3,7 @@ import numpy as np
 from os import listdir
 from os.path import isfile, join
 
-data_path = 'D:/ML/PyCharm/face recognition-vikas/data/'
+data_path = '### folder path where data is stored ####'
 onlyfiles = [f  for f in listdir(data_path) if isfile(join(data_path, f))]
 print(onlyfiles)
 Training_data, Labels = [], []
