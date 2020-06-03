@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-face_classifier = cv2.CascadeClassifier('C:/Users/vikas/AppData/Local/Programs/Python/Python38/Lib/site-packages/cv2/data/haarcascade_frontalface_default.xml')
+face_classifier = cv2.CascadeClassifier('### classifier file location ###')
 
 def face_extractor(img):
 
@@ -26,7 +26,7 @@ while True:
         face = cv2.resize(face_extractor(frame),(200,200))
         face = cv2.cvtColor(face, cv2.COLOR_BGR2GRAY)
 
-        file_path = 'D:/ML/PyCharm/face recognition-vikas/data/user'+str(count)+'.jpg'
+        file_path = '### folder path ####/user'+str(count)+'.jpg'
         cv2.imwrite(file_path,face)
 
         cv2.putText(face,str(count),(50,50), cv2.FONT_HERSHEY_COMPLEX,1,(0,255,0),2)
